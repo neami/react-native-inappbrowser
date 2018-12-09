@@ -1,5 +1,5 @@
 
-# InAppBrowser for React Native
+# Android InAppBrowser for React Native
 
 <img width="400px" src="img/inappbrowser.png">
 
@@ -12,14 +12,6 @@
 `$ react-native link react-native-inappbrowser-reborn`
 
 ### Manual installation
-
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-inappbrowser-reborn` and add `RNInAppBrowser.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNInAppBrowser.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
 
 #### Android
 
@@ -56,11 +48,6 @@ import InAppBrowser from 'react-native-inappbrowser-reborn';
     try {
       await InAppBrowser.isAvailable()
       InAppBrowser.open('https://www.google.com', {
-        // iOS Properties
-        dismissButtonStyle: 'cancel',
-        preferredBarTintColor: 'gray',
-        preferredControlTintColor: 'white',
-        readerMode: false,
         // Android Properties
         showTitle: true,
         toolbarColor: '#6200EE',
@@ -197,20 +184,6 @@ The StatusBar will keep the last one provided in your app. So if the StatusBar i
     }
   })
 ```
-
-## Credits 👍
-* **Expo:** [WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser)
-* **React Native Custom Tabs:** [Chrome Custom Tabs for React Native](https://github.com/droibit/react-native-custom-tabs)
-* **React Native Safari View:** [A React Native wrapper for Safari View Controller](https://github.com/naoufal/react-native-safari-view)
-
-## Collaborators 🥇
-[<img alt="jdnichollsc" src="https://avatars3.githubusercontent.com/u/2154886?v=3&s=117" width="117">](https://github.com/jdnichollsc) | [<img alt="EQuimper" src="https://avatars3.githubusercontent.com/u/15819498?v=4&s=117" width="117">](https://github.com/EQuimper) | [<img alt="bonesyblue" src="https://avatars3.githubusercontent.com/u/7486722?s=460&v=4&s=117" width="117">](https://github.com/bonesyblue) | [<img alt="mlazari" src="https://avatars3.githubusercontent.com/u/4928274?v=4&s=117" width="117">](https://github.com/mlazari) | [<img alt="maestor" src="https://avatars3.githubusercontent.com/u/3604902?v=4&s=117" width="117">](https://github.com/maestor)
-:---: | :---: |:---: | :---: | :---: |
-[Juan Nicholls](mailto:jdnichollsc@hotmail.com) | [Emanuel Quimper](mailto:quimperemanuel@gmail.com) | [Jonathan Bones](mailto:bonesyblue@gmail.com) | [Mihai Lazari](https://github.com/mlazari) | [Kalle Haavisto](mailto:maestori@gmail.com)
-
-## Supporting 🍻
-I believe in Unicorns 🦄
-Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
 
 ## Happy coding 💯
 Made with ❤️
