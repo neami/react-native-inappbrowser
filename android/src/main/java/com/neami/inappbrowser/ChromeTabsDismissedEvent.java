@@ -1,4 +1,4 @@
-package com.proyecto26.inappbrowser;
+package com.neami.inappbrowser;
 
 public class ChromeTabsDismissedEvent {
   public final String message;

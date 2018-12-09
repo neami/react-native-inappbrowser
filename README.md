@@ -1,47 +1,48 @@
-
 # Android InAppBrowser for React Native
 
 <img width="400px" src="img/inappbrowser.png">
 
 ## Getting started
 
-`$ npm install react-native-inappbrowser-reborn --save`
+`$ npm install react-native-inappbrowser-android --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-inappbrowser-reborn`
+`$ react-native link react-native-inappbrowser-android`
 
 ### Manual installation
 
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.proyecto26.inappbrowser.RNInAppBrowserPackage;` to the imports at the top of the file
-  - Add `new RNInAppBrowserPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-inappbrowser-reborn'
-  	project(':react-native-inappbrowser-reborn').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-inappbrowser-reborn/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      implementation project(':react-native-inappbrowser-reborn')
-  	```
+1.  Open up `android/app/src/main/java/[...]/MainActivity.java`
+
+- Add `import com.neami.inappbrowser.RNInAppBrowserPackage;` to the imports at the top of the file
+- Add `new RNInAppBrowserPackage()` to the list returned by the `getPackages()` method
+
+2.  Append the following lines to `android/settings.gradle`:
+    ```
+    include ':react-native-inappbrowser-android'
+    project(':react-native-inappbrowser-android').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-inappbrowser-android/android')
+    ```
+3.  Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+    ```
+      implementation project(':react-native-inappbrowser-android')
+    ```
 
 ## Usage
 
-Methods       | Action
-------------- | ------
-`open`        | Opens the url with Safari in a modal on iOS using **SFSafariViewController**, and Chrome in a new custom tab on Android. On iOS, the modal Safari will not share cookies with the system Safari.
-`close`       | Dismisses the system's presented web browser
-`openAuth`    | Opens the url with Safari in a modal on iOS using **SFAuthenticationSession**, and Chrome in a new custom tab on Android. On iOS, the user will be asked whether to allow the app to authenticate using the given url.
-`closeAuth`   | Dismisses the current authentication session
-`isAvailable` | Detect if the device supports this plugin
+| Methods       | Action                                                                         |
+| ------------- | ------------------------------------------------------------------------------ |
+| `open`        | Opens the url with Safari in a modal on Chrome in a new custom tab on Android. |
+| `close`       | Dismisses the system's presented web browser                                   |
+| `openAuth`    | Opens the url with Safari in a modal on Chrome in a new custom tab on Android. |
+| `closeAuth`   | Dismisses the current authentication session                                   |
+| `isAvailable` | Detect if the device supports this plugin                                      |
 
 ### Demo
 
 ```javascript
-import InAppBrowser from 'react-native-inappbrowser-reborn';
+import InAppBrowser from 'react-native-inappbrowser-android';
 
 ...
   async openLink() {
@@ -79,15 +80,19 @@ import InAppBrowser from 'react-native-inappbrowser-reborn';
 ### Authentication Flow using Deep Linking
 
 - utilities.js
+
 ```javascript
-import { Platform } from 'react-native'
+import { Platform } from "react-native";
 export const getDeepLink = (path = "") => {
-  const scheme = 'my-scheme'
-  const prefix = Platform.OS == 'android' ? `${scheme}://my-host/` : `${scheme}://`
-  return prefix + path
-}
+  const scheme = "my-scheme";
+  const prefix =
+    Platform.OS == "android" ? `${scheme}://my-host/` : `${scheme}://`;
+  return prefix + path;
+};
 ```
+
 - App.js ([Using react-navigation with Deep Linking](https://reactnavigation.org/docs/en/deep-linking.html))
+
 ```javascript
 import { Root } from 'native-base'
 import { getDeepLink } from './utilities'
@@ -120,9 +125,10 @@ const Main = createStackNavigator(
 ```
 
 - LoginComponent
+
 ```javascript
 import { Linking } from 'react-native'
-import InAppBrowser from 'react-native-inappbrowser-reborn'
+import InAppBrowser from 'react-native-inappbrowser-android'
 import { getDeepLink } from './utilities'
 ...
   async onLogin() {
@@ -131,8 +137,6 @@ import { getDeepLink } from './utilities'
     try {
       await InAppBrowser.isAvailable()
       InAppBrowser.openAuth(url, deepLink, {
-        // iOS Properties
-        dismissButtonStyle: 'cancel',
         // Android Properties
         showTitle: false,
         enableUrlBarHiding: true,
@@ -151,6 +155,7 @@ import { getDeepLink } from './utilities'
 ```
 
 - SplashComponent
+
 ```javascript
 ...
   componentWillMount() {
@@ -184,8 +189,3 @@ The StatusBar will keep the last one provided in your app. So if the StatusBar i
     }
   })
 ```
-
-## Happy coding 💯
-Made with ❤️
-
-<img width="150px" src="http://phaser.azurewebsites.net/assets/nicholls.png" align="right">

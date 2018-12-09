@@ -1,4 +1,4 @@
-package com.proyecto26.inappbrowser;
+package com.neami.inappbrowser;
 
 import android.app.Activity;
 import android.content.Context;

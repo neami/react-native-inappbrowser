@@ -1,5 +1,5 @@
 
-package com.proyecto26.inappbrowser;
+package com.neami.inappbrowser;
 
 import java.util.Arrays;
 import java.util.Collections;

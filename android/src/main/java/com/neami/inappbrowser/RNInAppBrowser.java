@@ -1,4 +1,4 @@
-package com.proyecto26.inappbrowser;
+package com.neami.inappbrowser;
 
 import android.R.anim;
 import android.net.Uri;
@@ -80,11 +80,11 @@ public class RNInAppBrowser {
                 "Invalid secondary toolbar color '" + colorString + "': " + e.getMessage());
       }
     }
-    if (options.hasKey(KEY_ENABLE_URL_BAR_HIDING) && 
+    if (options.hasKey(KEY_ENABLE_URL_BAR_HIDING) &&
         options.getBoolean(KEY_ENABLE_URL_BAR_HIDING)) {
       builder.enableUrlBarHiding();
     }
-    if (options.hasKey(KEY_DEFAULT_SHARE_MENU_ITEM) && 
+    if (options.hasKey(KEY_DEFAULT_SHARE_MENU_ITEM) &&
         options.getBoolean(KEY_DEFAULT_SHARE_MENU_ITEM)) {
       builder.addDefaultShareMenuItem();
     }
@@ -143,7 +143,7 @@ public class RNInAppBrowser {
     if (mOpenBrowserPromise == null) {
       return;
     }
-    
+
     if (currentActivity == null) {
       mOpenBrowserPromise.reject(ERROR_CODE, "No activity");
       mOpenBrowserPromise = null;

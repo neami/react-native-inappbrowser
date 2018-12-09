@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>react-native-inappbrowser-reborn</name>
-	<comment>Project react-native-inappbrowser-reborn created by Buildship.</comment>
+	<name>react-native-inappbrowser-android</name>
+	<comment>Project react-native-inappbrowser-android created by Buildship and Modified by Neami.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
