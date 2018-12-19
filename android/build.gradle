@@ -45,4 +45,3 @@ dependencies {
   implementation "com.android.support:customtabs:${safeExtGet('supportLibVersion', DEFAULT_SUPPORT_LIB_VERSION)}"
   implementation 'org.greenrobot:eventbus:3.+'
 }
-  

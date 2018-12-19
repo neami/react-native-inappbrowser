@@ -1,7 +1,7 @@
 {
   "name": "react-native-inappbrowser-android",
   "version": "0.0.1",
-  "description": "InAppBrowser for React Native",
+  "description": "Android InAppBrowser for React Native",
   "main": "index.js",
   "readmeFilename": "README.md",
   "scripts": {
@@ -17,16 +17,15 @@
   },
   "keywords": [
     "react-native",
-    "in",
     "app",
     "browser",
     "inappbrowser",
-    "in-app-browser"
+    "in-app-browser-android"
   ],
   "author": "Neami",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.55.0"
+    "react-native": "^0.57.0"
   },
   "dependencies": {
     "invariant": "^2.2.4"
