@@ -4,7 +4,7 @@
 
 ## Getting started
 
-`$ npm install react-native-inappbrowser-android --save`
+`$ npm install https://github.com/neami/react-native-inappbrowser.git --save`
 
 ### Mostly automatic installation
 
