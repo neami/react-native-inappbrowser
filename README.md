@@ -189,3 +189,8 @@ The StatusBar will keep the last one provided in your app. So if the StatusBar i
     }
   })
 ```
+
+### Credits
+
+- (https://github.com/proyecto26/react-native-inappbrowser)[InAppBrowser for React Native]
+- (https://github.com/droibit/react-native-custom-tabs)[React Native Custom Tabs: Chrome Custom Tabs for React Native]
