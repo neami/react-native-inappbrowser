@@ -1,7 +1,5 @@
 # Android InAppBrowser for React Native
 
-<img width="400px" src="img/inappbrowser.png">
-
 ## Getting started
 
 `$ npm install https://github.com/neami/react-native-inappbrowser.git --save`
